@@ -42,13 +42,13 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
           <div
             className={cn(
               s.searchBox,
-              'basis-[55%] min-w-[17rem] flex items-center gap-x-2 px-6'
+              'basis-[55%]  flex items-center gap-x-2 px-6'
             )}
           >
             <Search className="fill-primary" />
             <input
               placeholder="What do you want to learn about?"
-              className="text-primary bg-transparent w-1/2 border-b border-purple-200 font-inter placeholder:text-primary font-normal active:outline-none focus:outline-none"
+              className="min-w-[17rem] text-primary bg-transparent w-1/2 border-b border-purple-200 font-inter placeholder:text-primary font-normal active:outline-none focus:outline-none"
             />
           </div>
           <div className="flex items-center basis-[26%] justify-end gap-4 px-4 whitespace-nowrap">
