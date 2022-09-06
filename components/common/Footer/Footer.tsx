@@ -32,7 +32,7 @@ const Footer: FC<any> = ({ className }) => {
                     <Input
                       type="text"
                       placeholder="Your Email Address"
-                      className="bg-transparent outline-0 text-sm  px-4 placeholder:text-info !border-transparent !shadow-none"
+                      className="!bg-transparent outline-0 text-sm !text-info  px-4 placeholder:!text-info !border-transparent !shadow-none"
                     />
                   </div>
                   <Button variant="custom" className="!p-0" type="submit">
