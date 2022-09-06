@@ -1,0 +1,37 @@
+.root {
+  @apply border border-purple-200 bg-white rounded
+  flex items-center gap-2.5 placeholder:text-tertiary
+  py-1.5 px-3 md:py-2 md:px-4 md:text-base;
+}
+.root:default {
+  @apply border-[#14CFC5] text-gray-700;
+}
+.root:hover {
+  @apply border-[#D5C3E2] shadow-input;
+}
+.root:active,
+.root:focus,
+.root:focus-within {
+  @apply border-primary outline-none shadow-input;
+}
+.root:invalid {
+  @apply !border-danger !text-gray-700;
+}
+.root:read-only {
+  @apply bg-gray-200 border-gray-400 text-secondary;
+}
+
+.small {
+  @apply !py-1 !px-2 !text-sm;
+}
+.default {
+  @apply !py-1.5 !px-3;
+}
+.large {
+  @apply !py-2 !px-4 text-xl;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .root {
+    @apply text-base;
+  }
+}

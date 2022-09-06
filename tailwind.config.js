@@ -1,0 +1,81 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: 'var(--primary)',
+        secondary: 'var(--secondary)',
+        info: 'var(--info)',
+        tertiary: 'var(--tertiary)',
+        danger: 'var(--danger)',
+        light: 'var(--light)',
+        cautions: 'var(--cautions)',
+        premium: 'var(--premium)',
+        dark: 'var(--dark)',
+
+        'purple-100': 'var(--purple-100)',
+        'purple-200': 'var(--purple-200)',
+        'purple-300': 'var(--purple-300)',
+        'purple-400': 'var(--purple-400)',
+        'purple-500': 'var(--purple-500)',
+        'purple-600': 'var(--purple-600)',
+        'purple-700': 'var(--purple-700)',
+        'purple-800': 'var(--purple-800)',
+        'purple-900': 'var(--purple-900)',
+
+        'green-100': 'var(--green-100)',
+        'green-200': 'var(--green-200)',
+        'green-300': 'var(--green-300)',
+        'green-400': 'var(--green-400)',
+        'green-500': 'var(--green-500)',
+        'green-600': 'var(--green-600)',
+        'green-700': 'var(--green-700)',
+        'green-800': 'var(--green-800)',
+        'green-900': 'var(--green-900)',
+
+        'teal-100': 'var(--teal-100)',
+        'teal-200': 'var(--teal-200)',
+        'teal-300': 'var(--teal-300)',
+        'teal-400': 'var(--teal-400)',
+        'teal-500': 'var(--teal-500)',
+        'teal-600': 'var(--teal-600)',
+        'teal-700': 'var(--teal-700)',
+        'teal-800': 'var(--teal-800)',
+        'teal-900': 'var(--teal-900)',
+
+        'gray-100': 'var(--gray-100)',
+        'gray-200': 'var(--gray-200)',
+        'gray-300': 'var(--gray-300)',
+        'gray-400': 'var(--gray-400)',
+        'gray-500': 'var(--gray-500)',
+        'gray-600': 'var(--gray-600)',
+        'gray-700': 'var(--gray-700)',
+        'gray-800': 'var(--gray-800)',
+        'gray-900': 'var(--gray-900)',
+
+        'study-grade-a': 'var(--study-grade-a)',
+        'study-grade-b': 'var(--study-grade-b)',
+        'study-grade-c': 'var(--study-grade-c)',
+        'study-grade-d': 'var(--study-grade-d)',
+        'study-grade-f': 'var(--study-grade-f)',
+      },
+      fontFamily: {
+        lora: 'var(--font-lora)',
+        inter: 'var(--font-inter)',
+      },
+      maxWidth: {
+        '8xl': '2460px',
+      },
+      boxShadow: {
+        navigation: '0px 2px 6px rgba(0, 0, 0, 0.08)',
+        searchBox: 'inset 0px 0px 18px -4px rgba(0, 0, 0, 0.15)',
+        input: '0px 4px 14px rgba(193, 141, 248, 0.13)',
+      },
+    },
+  },
+  plugins: [],
+}

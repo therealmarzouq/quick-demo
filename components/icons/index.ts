@@ -1,0 +1,6 @@
+export { default as Menu } from './Menu'
+export { default as Search } from './Search'
+export { default as Send } from './Send'
+export { default as Apple } from './Apple'
+export { default as Google } from './Google'
+export { default as Facebook } from './Facebook'

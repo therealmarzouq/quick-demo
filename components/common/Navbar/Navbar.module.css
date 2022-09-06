@@ -1,0 +1,13 @@
+.root {
+  @apply sticky top-0 bg-purple-600 md:bg-white z-40 transition-all duration-150 min-h-[64px] shadow-navigation;
+}
+
+.nav {
+  @apply relative hidden md:flex flex-row items-stretch;
+}
+.navMobile {
+  @apply relative flex md:hidden flex-row items-center justify-between py-4 md:py-4;
+}
+.searchBox {
+  @apply bg-[#f6f6f6] shadow-searchBox;
+}

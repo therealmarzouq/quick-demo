@@ -1,0 +1,6 @@
+.root {
+  @apply h-full mx-auto transition-colors duration-150 max-w-8xl;
+}
+.main {
+  @apply pb-32;
+}

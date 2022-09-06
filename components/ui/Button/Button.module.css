@@ -1,0 +1,39 @@
+.root {
+  @apply items-center transition ease-in-out duration-150
+  inline-flex text-center leading-6 tracking-wide justify-center border border-transparent
+  gap-4 rounded-[4.8px] py-1.5 px-3 text-base md:py-3 md:px-4;
+}
+
+.small {
+  @apply !py-1 !px-2 !text-sm;
+}
+.medium {
+  @apply !py-1.5 !px-3 !text-base;
+}
+.large {
+  @apply !py-2 !px-4 !text-lg;
+}
+
+.primary {
+  @apply bg-primary text-white;
+}
+.primary:hover {
+  @apply bg-[#8C68CD];
+}
+.primary:active {
+  @apply bg-purple-800;
+}
+.primary:disabled {
+  @apply bg-[#BABBBD];
+}
+
+.socialAuthentication {
+  @apply inline-flex rounded-[3px] md:rounded-lg !py-2 !px-4 relative
+  bg-white shadow-[0px_0px_1px_rgba(12,26,75,0.2),0px_1px_3px_rgba(50,50,71,0.1)];
+}
+.socialAuthentication:hover {
+  @apply opacity-75;
+}
+.socialAuthentication:active {
+  @apply shadow-inner;
+}
