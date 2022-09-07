@@ -22,7 +22,7 @@ const Footer: FC<any> = ({ className }) => {
               >
                 Never miss an update!
               </Text>
-              <p className="max-w-xs text-info">
+              <p className="max-w-xs mx-auto text-info">
                 We are always updating our research and adding new stuff.
                 Sign-up and always stay on top of our updates!
               </p>
