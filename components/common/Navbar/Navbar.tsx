@@ -52,7 +52,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
             </Button>
             <Input
               placeholder="What do you want to learn about?"
-              className="!min-w-[18rem] !text-primary !bg-transparent !w-1/2 border-t-0 !border-x-0 !border-b  !font-inter
+              className="!min-w-[18rem] !text-primary !bg-transparent !w-1/2 !border-t-0 !border-x-0 !border-b  !font-inter
                placeholder:!text-primary !font-normal active:!outline-none focus:!outline-none !rounded-none active:!shadow-none focus-within:!shadow-none focus:!shadow-none hover:!shadow-none !px-0"
             />
           </form>

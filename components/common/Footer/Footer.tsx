@@ -32,7 +32,7 @@ const Footer: FC<any> = ({ className }) => {
                     type="email"
                     placeholder="Your Email Address"
                     className="!pl-8 absolute h-full w-full !bg-transparent
-                    placeholder:!text-info text-info invalid:!text-info rounded-full focus:!border-info
+                    placeholder:!text-info text-info invalid:!text-info !rounded-full focus:!border-info
                     focus-visible:!border-info focus-within:!border-info active:!border-info outline-none text-sm"
                   />
                   <Button
