@@ -1,10 +1,10 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 // import Link from 'next/link'
 import s from './Navbar.module.css'
 import cn from 'clsx'
 import NavbarRoot from './NavbarRoot'
 import { Logo, Container, Button, Link, Input } from '@components/ui'
-import { Menu, Search } from '@components/icons'
+import { Cross, Menu, Search } from '@components/icons'
 import { useRouter } from 'next/router'
 
 interface Link {
@@ -17,6 +17,7 @@ interface NavbarProps {
 }
 
 const Navbar: FC<NavbarProps> = ({ links }) => {
+  const [toggleMenu, setToggleMenu] = useState(false)
   const router = useRouter()
   return (
     <NavbarRoot>
@@ -36,7 +37,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
           </div>
         </div>
         <div className={s.nav}>
-          <div className="flex items-center py-4 md:py-6 basis-[18%]">
+          <div className="flex items-center py-4 md:py-6 basis-[18%] min-w-[18%]">
             <Logo className="fill-primary h-7 w-18" />
           </div>
           <form
@@ -51,7 +52,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
             </Button>
             <Input
               placeholder="What do you want to learn about?"
-              className="!min-w-[22rem] !text-primary !bg-transparent !w-1/2 border-t-0 !border-x-0 !border-b  !font-inter
+              className="!min-w-[18rem] !text-primary !bg-transparent !w-1/2 border-t-0 !border-x-0 !border-b  !font-inter
                placeholder:!text-primary !font-normal active:!outline-none focus:!outline-none !rounded-none active:!shadow-none focus-within:!shadow-none focus:!shadow-none hover:!shadow-none !px-0"
             />
           </form>
@@ -66,8 +67,38 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
             >
               Sign up
             </Button>
-            <Button variant="custom" className="p-1">
-              <Menu className="stroke-black w-5" />
+            <div
+              className={cn(
+                'gap-x-4 transition-[width] duration-500 flex overflow-auto py-4 lg:max-w-xl',
+                !toggleMenu && '!w-0 overflow-hidden'
+              )}
+            >
+              <Link href="/" className="text-[15px]">
+                Categories
+              </Link>
+              <Link href="/" className="text-[15px]">
+                Conditions
+              </Link>
+              <Link href="/" className="text-[15px]">
+                Interventions
+              </Link>
+              <Link href="/" className="text-[15px]">
+                Outcomes
+              </Link>
+              <Link href="/" className="text-[15px]">
+                Membership
+              </Link>
+              <Link href="/" className="text-[15px]">
+                About us
+              </Link>
+            </div>
+            <Button
+              variant="custom"
+              className="p-1"
+              onClick={() => setToggleMenu(!toggleMenu)}
+            >
+              {toggleMenu && <Cross className="stroke-black w-5" />}
+              {!toggleMenu && <Menu className="stroke-black w-5" />}
             </Button>
           </div>
         </div>

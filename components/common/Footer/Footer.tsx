@@ -37,7 +37,7 @@ const Footer: FC<any> = ({ className }) => {
                   />
                   <Button
                     variant="custom"
-                    className="!p-0 absolute right-2.5 -translate-y-1/2 top-1/2 m-0 hover:opacity-70"
+                    className="!p-0 absolute right-2.5 -translate-y-1/2 top-1/2 m-0 hover:opacity-70 active:rotate-45"
                     type="submit"
                   >
                     <Send className="h-11 w-11" />
