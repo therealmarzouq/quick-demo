@@ -27,17 +27,19 @@ const Footer: FC<any> = ({ className }) => {
                 Sign-up and always stay on top of our updates!
               </p>
               <form onSubmit={(e) => e.preventDefault()}>
-                <div className="flex flex-row justify-around items-center border border-info md:max-w-xs rounded-full py-1.5 px-2 my-5">
-                  <div className="w-4/5">
-                    <Input
-                      type="text"
-                      placeholder="Your Email Address"
-                      required
-                      className="!bg-transparent outline-0 text-sm
-                      !text-info  px-4 placeholder:!text-info !border-transparent !shadow-none invalid:!border-transparent"
-                    />
-                  </div>
-                  <Button variant="custom" className="!p-0" type="submit">
+                <div className="relative  md:max-w-xs rounded-full h-14 my-5">
+                  <Input
+                    type="email"
+                    placeholder="Your Email Address"
+                    className="!pl-8 absolute h-full w-full !bg-transparent
+                    placeholder:!text-info text-info invalid:!text-info rounded-full focus:!border-info
+                    focus-visible:!border-info focus-within:!border-info active:!border-info outline-none text-sm"
+                  />
+                  <Button
+                    variant="custom"
+                    className="!p-0 absolute right-2.5 -translate-y-1/2 top-1/2 m-0 hover:opacity-70"
+                    type="submit"
+                  >
                     <Send className="h-11 w-11" />
                   </Button>
                 </div>
