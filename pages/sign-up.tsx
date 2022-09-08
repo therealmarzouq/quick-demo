@@ -1,6 +1,7 @@
 import { Layout } from '@components/common'
 import { Apple, Facebook, Google } from '@components/icons'
 import { Button, Container, Input, Text } from '@components/ui'
+import Head from 'next/head'
 import { useState } from 'react'
 
 export default function SignUp() {
@@ -9,12 +10,16 @@ export default function SignUp() {
   >('password')
   return (
     <Container className="pt-8 md:pt-20">
+      <Head>
+        <title>Sign up | Examine</title>
+        <meta property="og:title" content="Sign up | Examine" key="title" />
+      </Head>
       <div className="mx-auto max-w-[540px] rounded-[30px] md:px-14 md:py-14 md:shadow-[0px_2px_12px_rgba(0,0,0,0.08)]">
         <Text variant="sectionHeading" className="text-center">
           Create your account
         </Text>
         <p className="font-normal text-center text-sm  text-tertiary">
-          It&#x2019;s Includes a free 2 week trial!
+          It Includes a free 2 week trial!
         </p>
         <div className="flex gap-4 justify-center mt-8 mb-4">
           <Button variant="socialAuthentication">

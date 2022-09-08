@@ -3,7 +3,7 @@ import { FC } from 'react'
 import s from './Navbar.module.css'
 import cn from 'clsx'
 import NavbarRoot from './NavbarRoot'
-import { Logo, Container, Button, Link } from '@components/ui'
+import { Logo, Container, Button, Link, Input } from '@components/ui'
 import { Menu, Search } from '@components/icons'
 import { useRouter } from 'next/router'
 
@@ -39,18 +39,22 @@ const Navbar: FC<NavbarProps> = ({ links }) => {
           <div className="flex items-center py-4 md:py-6 basis-[18%]">
             <Logo className="fill-primary h-7 w-18" />
           </div>
-          <div
+          <form
             className={cn(
               s.searchBox,
               'basis-[55%]  flex items-center gap-x-2 px-6'
             )}
+            onSubmit={(e) => e.preventDefault()}
           >
-            <Search className="fill-primary" />
-            <input
+            <Button variant="custom" className="!p-0" type="submit">
+              <Search className="fill-primary cursor-pointer" />
+            </Button>
+            <Input
               placeholder="What do you want to learn about?"
-              className="min-w-[17rem] text-primary bg-transparent w-1/2 border-b border-purple-200 font-inter placeholder:text-primary font-normal active:outline-none focus:outline-none"
+              className="!min-w-[22rem] !text-primary !bg-transparent !w-1/2 border-t-0 !border-x-0 !border-b  !font-inter
+               placeholder:!text-primary !font-normal active:!outline-none focus:!outline-none !rounded-none active:!shadow-none focus-within:!shadow-none focus:!shadow-none hover:!shadow-none !px-0"
             />
-          </div>
+          </form>
           <div className="flex items-center basis-[26%] justify-end gap-4 px-4 whitespace-nowrap">
             <Link href="/login" className="text-[15px]">
               Login

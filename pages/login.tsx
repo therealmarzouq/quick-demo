@@ -1,6 +1,7 @@
 import { Layout } from '@components/common'
 import { Apple, Facebook, Google } from '@components/icons'
 import { Button, Container, Input, Text, Link } from '@components/ui'
+import Head from 'next/head'
 import { useState } from 'react'
 
 export default function Login() {
@@ -9,6 +10,10 @@ export default function Login() {
   >('password')
   return (
     <Container className="pt-8 md:pt-20">
+      <Head>
+        <title>Login | Examine</title>
+        <meta property="og:title" content="Login | Examine" key="title" />
+      </Head>
       <div className="mx-auto max-w-[540px] rounded-[30px] md:px-14 md:pt-12 md:pb-8 md:shadow-[0px_2px_12px_rgba(0,0,0,0.08)]">
         <Text variant="sectionHeading" className="text-center">
           Welcome back! 👋

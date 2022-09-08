@@ -6,7 +6,7 @@ import { Send } from '@components/icons'
 
 const Footer: FC<any> = ({ className }) => {
   const rootClassName = cn(s.root, className)
-
+  const linksClassName = cn('hover:underline hover:opacity-60')
   return (
     <footer className={rootClassName}>
       <Container className="pt-20 pb-10 md:pl-48 md:pr-40">
@@ -32,7 +32,9 @@ const Footer: FC<any> = ({ className }) => {
                     <Input
                       type="text"
                       placeholder="Your Email Address"
-                      className="!bg-transparent outline-0 text-sm !text-info  px-4 placeholder:!text-info !border-transparent !shadow-none"
+                      required
+                      className="!bg-transparent outline-0 text-sm
+                      !text-info  px-4 placeholder:!text-info !border-transparent !shadow-none invalid:!border-transparent"
                     />
                   </div>
                   <Button variant="custom" className="!p-0" type="submit">
@@ -52,16 +54,24 @@ const Footer: FC<any> = ({ className }) => {
               </Text>
               <ol className="flex flex-col gap-y-6 mb-4 leading-7">
                 <li>
-                  <Link href="">Our Story</Link>
+                  <Link href="" className={linksClassName}>
+                    Our Story
+                  </Link>
                 </li>
                 <li>
-                  <Link href="">Our Team</Link>
+                  <Link href="" className={linksClassName}>
+                    Our Team
+                  </Link>
                 </li>
                 <li>
-                  <Link href="">Our Editorial Policy</Link>
+                  <Link href="" className={linksClassName}>
+                    Our Editorial Policy
+                  </Link>
                 </li>
                 <li>
-                  <Link href="">Our Mistakes</Link>{' '}
+                  <Link href="" className={linksClassName}>
+                    Our Mistakes
+                  </Link>
                 </li>
               </ol>
             </div>
@@ -74,18 +84,24 @@ const Footer: FC<any> = ({ className }) => {
               </Text>
               <ol className="flex flex-col gap-y-6 mb-4 leading-7">
                 <li>
-                  <Link href="">
+                  <Link href="" className={linksClassName}>
                     Continuing <br className="hidden md:block" /> Education
                   </Link>
                 </li>
                 <li>
-                  <Link href="">For Journalists </Link>
+                  <Link href="" className={linksClassName}>
+                    For Journalists
+                  </Link>
                 </li>
                 <li>
-                  <Link href="">Student Discount</Link>
+                  <Link href="" className={linksClassName}>
+                    Student Discount
+                  </Link>
                 </li>
                 <li>
-                  <Link href="">Senior Discount</Link>
+                  <Link href="" className={linksClassName}>
+                    Senior Discount
+                  </Link>
                 </li>
               </ol>
             </div>
@@ -98,16 +114,24 @@ const Footer: FC<any> = ({ className }) => {
               </Text>
               <ol className="flex flex-col gap-y-6 mb-4 leading-7">
                 <li>
-                  <Link href="">Facebook</Link>{' '}
+                  <Link href="" className={linksClassName}>
+                    Facebook
+                  </Link>
                 </li>
                 <li>
-                  <Link href="">Twitter</Link>
+                  <Link href="" className={linksClassName}>
+                    Twitter
+                  </Link>
                 </li>
                 <li>
-                  <Link href="">Linkedin</Link>
+                  <Link href="" className={linksClassName}>
+                    Linkedin
+                  </Link>
                 </li>
                 <li>
-                  <Link href="">Email Us</Link>
+                  <Link href="" className={linksClassName}>
+                    Email Us
+                  </Link>
                 </li>
               </ol>
             </div>
@@ -116,9 +140,13 @@ const Footer: FC<any> = ({ className }) => {
         <div className="flex justify-between text-info text-sm flex-wrap">
           <small>Copyright 2010 - 2021 Examine Inc.</small>
           <small className="flex items-center">
-            <Link href=""> Privacy Policy </Link>
+            <Link href="" className={linksClassName}>
+              Privacy Policy
+            </Link>
             <span className="border-l border-info h-2 mx-2"></span>
-            <Link href=""> Website Terms </Link>
+            <Link href="" className={linksClassName}>
+              Website Terms
+            </Link>
           </small>
         </div>
       </Container>

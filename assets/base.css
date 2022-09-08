@@ -84,7 +84,6 @@ body {
   color: var(--text-primary);
   overscroll-behavior-x: none;
   font-family: var(--font-inter);
-  @apply select-none;
 }
 
 body {
